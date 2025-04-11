@@ -8,8 +8,8 @@ function Header () {
             <div>
                 <ul className={styles.navBar}>
                     <li><Link to="homepage">Homepage</Link></li>
-                    <li><Link to="Products">Products</Link></li>
-                    <li><Link to="Cart">Cart</Link></li>
+                    <li><Link to="products">Products</Link></li>
+                    <li><Link to="cart">Cart</Link></li>
                 </ul>
             </div>
         </header>

@@ -1,4 +1,4 @@
-@import "../vars.css";
+@import "../../vars.css";
 
 Header {
     display: flex;
@@ -12,13 +12,4 @@ Header {
 .navBar {
     display: flex;
     gap: 10px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: var(--dark-blue);
 }
