@@ -1,0 +1,24 @@
+@import "../vars.css";
+
+Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-green);
+    color: var(--dark-blue);
+    padding: 10px;
+}
+
+.navBar {
+    display: flex;
+    gap: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
