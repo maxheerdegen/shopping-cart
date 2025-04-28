@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
-function Header () {
+function Header ({ cartItems }) {
+
     return (
         <header>
             <Link to="homepage">My Awesome Shop</Link>

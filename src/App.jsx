@@ -5,10 +5,12 @@ import Footer from './components/Footer/Footer.jsx';
 
 
 function App() {
+
   const [cartItems, setCartItems] = useState([]);
+
   return (
     <>
-      <Header/>
+      <Header cartItems={cartItems}/>
       <Outlet context={[cartItems, setCartItems]}/>
       <Footer/>
     </>

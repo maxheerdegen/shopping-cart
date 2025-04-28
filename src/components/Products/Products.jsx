@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./Products.module.css";
-import { useOutletContext } from "react-router-dom";
 import ShopItem from "../ShopItem/ShopItem.jsx";
 
 function useProducts() {
@@ -34,7 +33,7 @@ function Products () {
         <div className={styles.container}>
             {items && 
             items.map((item) => (
-             <ShopItem key={item.id} title={item.title} image={item.image} price={item.price}/>
+             <ShopItem key={item.id} item={item}/>
             ))}
         </div>
     )
