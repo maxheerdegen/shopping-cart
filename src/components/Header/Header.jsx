@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 function Header () {
     return (
         <header>
-            <div>My awesome shop</div>
+            <Link to="homepage">My Awesome Shop</Link>
             <div>
                 <ul className={styles.navBar}>
                     <li><Link to="homepage">Homepage</Link></li>
