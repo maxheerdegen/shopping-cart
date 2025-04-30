@@ -1,37 +1,23 @@
-import { useState } from "react";
 import styles from "./ShopItem.module.css";
-import { useOutletContext } from "react-router-dom";
+import { useState } from "react";
 
-function ShopItem ({item}) {
+function ShopItem ({item, handleButtonClick, buttonTitle, itemQuantity = 1}) {
 
-    const [quantity, setQuantity] = useState(1);
-    const [cartItems, setCartItems] = useOutletContext();
-
-    const handleButtonClick = (id) => {
-        for (let i = 0; i < cartItems.length; i++) {
-            if (id === cartItems[i].id) {
-                    cartItems[i].quantity += quantity;
-                    setCartItems([...cartItems]);
-                    return;
-            }
-        }
-        item.quantity = quantity
-        setCartItems([...cartItems, item]);
-    }
+    const [quantity, setQuantity] = useState(itemQuantity);
 
     return (
         <div className={styles.card}>
         <div>{item.title}</div>
         <img src={item.image} alt="product image" height={150} />
         <div>{item.price} €</div>
-        <div className="amount">
+        <div className="quantity">
             <input 
             type="number" 
             min={1} 
             step={1} 
             defaultValue={quantity}
             onChange={(e) => setQuantity(+e.target.value)}/>
-            <button onClick={() => handleButtonClick(item.id)}>Add to cart</button>
+            <button onClick={() => handleButtonClick(item, quantity)}>{buttonTitle}</button>
         </div>
     </div>
     )

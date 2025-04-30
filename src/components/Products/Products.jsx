@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Products.module.css";
 import ShopItem from "../ShopItem/ShopItem.jsx";
+import { useOutletContext } from "react-router-dom";
 
 function useProducts() {
     const [items, setIems] = useState([]);
@@ -25,6 +26,19 @@ function useProducts() {
 
 function Products () {
     const { items, error, loading } = useProducts();
+    const [cartItems, setCartItems] = useOutletContext();
+    
+    const addToCart = (item, quantity) => {
+        for (let i = 0; i < cartItems.length; i++) {
+            if (item.id === cartItems[i].id) {
+                    cartItems[i].quantity += quantity;
+                    setCartItems([...cartItems]);
+                    return;
+             }
+         }
+        item.quantity = quantity;
+        setCartItems([...cartItems, item]);
+    }
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>A nework error was encountered.</p>
@@ -33,7 +47,7 @@ function Products () {
         <div className={styles.container}>
             {items && 
             items.map((item) => (
-             <ShopItem key={item.id} item={item}/>
+             <ShopItem key={item.id} item={item} handleButtonClick={addToCart} buttonTitle="Add to cart"/>
             ))}
         </div>
     )
