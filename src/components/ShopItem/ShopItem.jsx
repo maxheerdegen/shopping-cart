@@ -1,7 +1,7 @@
 import styles from "./ShopItem.module.css";
 import { useState } from "react";
 
-function ShopItem ({item, handleButtonClick, buttonTitle, itemQuantity = 1}) {
+function ShopItem ({item, handleButtonClick, buttonTitle, itemQuantity = 1, changeQuantity = null}) {
 
     const [quantity, setQuantity] = useState(itemQuantity);
 
@@ -16,7 +16,7 @@ function ShopItem ({item, handleButtonClick, buttonTitle, itemQuantity = 1}) {
             min={1} 
             step={1} 
             defaultValue={quantity}
-            onChange={(e) => setQuantity(+e.target.value)}/>
+            onChange= {(e) => changeQuantity ? changeQuantity(item, +e.target.value) : setQuantity(+e.target.value)}/>
             <button onClick={() => handleButtonClick(item, quantity)}>{buttonTitle}</button>
         </div>
     </div>

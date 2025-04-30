@@ -10,6 +10,12 @@ function Cart () {
         }))
     }
 
+    const changeQuantity = (item, quantity) => {
+       setCartItems(cartItems.map((cartItem) => {
+        return cartItem.id === item.id ? {...cartItem, quantity} : cartItem;
+       }))
+    }
+
     return (
         <>
         <ul>
@@ -17,11 +23,11 @@ function Cart () {
                 <div>No items in cart</div>
             ) : (
             cartItems.map((item) => {
-                return <ShopItem key={item.id} item={item} handleButtonClick={removeFromCart} itemQuantity={item.quantity} buttonTitle="Remove from cart"/>;
+                return <ShopItem key={item.id} item={item} handleButtonClick={removeFromCart} itemQuantity={item.quantity} buttonTitle="Remove from cart" changeQuantity={changeQuantity}/>;
             }))}
         </ul>
         <div>Total number of items: {cartItems.reduce((total, item) => total+= item.quantity, 0)}</div>
-        <div>Total: {cartItems.reduce((total, item) => total += item.price, 0)} €</div>
+        <div>Total: {cartItems.reduce((total, item) => total += item.price * item.quantity, 0)} €</div>
         </>
     )
 }
