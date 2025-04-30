@@ -11,6 +11,9 @@ function Header ({ cartItems }) {
                     <li><Link to="homepage">Homepage</Link></li>
                     <li><Link to="products">Products</Link></li>
                     <li><Link to="cart">Cart</Link></li>
+                    <li>{cartItems.reduce((total, item) => {
+                        return total + item.quantity;
+                    }, 0)}</li>
                 </ul>
             </div>
         </header>

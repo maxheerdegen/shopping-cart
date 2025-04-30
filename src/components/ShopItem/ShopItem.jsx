@@ -11,13 +11,12 @@ function ShopItem ({item}) {
         for (let i = 0; i < cartItems.length; i++) {
             if (id === cartItems[i].id) {
                     cartItems[i].quantity += quantity;
+                    setCartItems([...cartItems]);
                     return;
             }
         }
-        console.log(id);
         item.quantity = quantity
         setCartItems([...cartItems, item]);
-        console.log([...cartItems]);
     }
 
     return (
