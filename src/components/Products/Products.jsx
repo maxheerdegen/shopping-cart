@@ -29,15 +29,20 @@ function Products () {
     const [cartItems, setCartItems] = useOutletContext();
     
     const addToCart = (item, quantity) => {
+        let isInCart = false;
         for (let i = 0; i < cartItems.length; i++) {
-            if (item.id === cartItems[i].id) {
-                    cartItems[i].quantity += quantity;
-                    setCartItems([...cartItems]);
-                    return;
-             }
-         }
-        item.quantity = quantity;
-        setCartItems([...cartItems, item]);
+            if (cartItems[i].id === item.id) {
+                isInCart = true;
+                break;
+            }
+        }
+        if (isInCart) {
+            setCartItems(cartItems.map((cartItem) => {
+                return cartItem.id === item.id ? {...cartItem, quantity: cartItem.quantity + quantity} : cartItem;
+            }))
+        } else {
+            setCartItems([...cartItems, { ...item, quantity: quantity}])
+        }
     }
 
     if (loading) return <p>Loading...</p>
