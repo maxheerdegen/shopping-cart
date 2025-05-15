@@ -6,8 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/background.png");
+    background-image: url("/homepage-background.jpg");
     background-position: center;
+    min-height: 1000px;
+    min-width: 100vw;
 }
 
 .shoppingBtn {
@@ -18,4 +20,11 @@
     padding: 15px 30px;
     text-align: center;
     font-size: 2rem;
+}
+
+.about {
+    display: flex;
+    margin: 50px;
+    gap: 20px;
+    align-items: center;
 }

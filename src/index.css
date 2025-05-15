@@ -47,12 +47,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #root {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   font-size: 1.5rem;
+  color: var(--dark-blue);
 }
+
 
 ul {
   list-style-type: none;
@@ -60,5 +63,9 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--dark-blue);
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

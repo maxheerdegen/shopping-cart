@@ -6,7 +6,9 @@ Header {
     justify-content: space-between;
     background-color: var(--dark-green);
     color: var(--dark-blue);
-    padding: 10px;
+    padding: 10px 100px;
+    min-width: 100vw;
+    height: 100px;
 }
 
 .navBar {

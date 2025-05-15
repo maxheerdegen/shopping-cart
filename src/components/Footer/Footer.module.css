@@ -5,4 +5,20 @@ footer {
     text-align: center;
     background-color: var(--dark-green);
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    min-width: 100vw;
 }
+
+.title {
+    font-weight: bold;
+}
+
+.column ul {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+} 
