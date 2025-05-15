@@ -1,19 +1,24 @@
+@import "../../vars.css";
+
 .container {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
     margin: 50px;
-
 }
 
 .review {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
-    padding: 10px;
+    justify-content: center;
+    background-color: var(--main);
+    padding: 100px;
+    height: 300px;
     border-radius: 10px;
     border: solid black 1px;
+    width: 50vw;
 }
 
 .container button {
@@ -22,6 +27,7 @@
     box-shadow: none;
     border: none;
     opacity: 0.8;
+    background-color: var(--accent);
 }
 
 .container button:hover {

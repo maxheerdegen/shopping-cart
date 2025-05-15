@@ -7,11 +7,7 @@ function Homepage () {
     return (
     <>
        <div className={styles.content}>
-            <button className={styles.shoppingBtn}>
-                <Link to="/products">
-                    Let's start shopping!
-                </Link>
-            </button>
+            <Link className={styles.shoppingLink} to="/products">Let's start shopping!</Link>
        </div>
        <div className={styles.about}>
         <img src={aboutPicture} alt="picture of clothes" width={500}/>

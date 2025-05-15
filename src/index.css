@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  color: var(--dark-blue);
+  color: var(--text);
 }
 
 
@@ -67,5 +67,8 @@ a {
 
 a:hover {
   cursor: pointer;
-  text-decoration: underline;
+}
+
+a:visited {
+  color: inherit;
 }

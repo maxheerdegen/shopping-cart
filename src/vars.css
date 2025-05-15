@@ -1,5 +1,6 @@
 :root {
-    --dark-green: #7AB579;
-    --dark-blue: #0D2540;
-    --light-blue: #3F85D5;
+    --main: #eef2e6;
+    --text: #2f3e46;
+    --accent: #588157;
+    --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

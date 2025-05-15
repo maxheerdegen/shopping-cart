@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Products.module.css";
+import itemStyles from "../ShopItem/ShopItem.module.css"
 import ShopItem from "../ShopItem/ShopItem.jsx";
 import { useOutletContext } from "react-router-dom";
 
@@ -52,7 +53,7 @@ function Products () {
         <div className={styles.container}>
             {items && 
             items.map((item) => (
-             <ShopItem key={item.id} item={item} handleButtonClick={addToCart} buttonTitle="Add to cart"/>
+             <ShopItem className={itemStyles.onProductPage} key={item.id} item={item} handleButtonClick={addToCart} buttonTitle="Add to cart"/>
             ))}
         </div>
     )

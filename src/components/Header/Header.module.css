@@ -4,14 +4,44 @@ Header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--dark-green);
-    color: var(--dark-blue);
+    background-color: var(--main);
     padding: 10px 100px;
     min-width: 100vw;
-    height: 100px;
+    height: 200px;
+    font-size: 2.5rem;
+    box-shadow: var(--shadow);
 }
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+header a:hover {
+    background-color: var(--accent);
+}
+
 
 .navBar {
     display: flex;
-    gap: 10px;
+    gap: 50px;
 }
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cartQuantity {
+    background-color: var(--accent);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+

@@ -10,13 +10,13 @@ function Header ({ cartItems }) {
                 <ul className={styles.navBar}>
                     <li><Link to="homepage">Homepage</Link></li>
                     <li><Link to="products">Products</Link></li>
-                    <li><Link to="cart">Cart</Link></li>
+                    <li className={styles.cart}><Link to="cart">Cart</Link>
                     {
                     cartItems.length != 0 &&
-                    <li>{cartItems.reduce((total, item) => {
+                    <div className={styles.cartQuantity}>{cartItems.reduce((total, item) => {
                         return total + item.quantity;
-                    }, 0)}</li>
-                }
+                    }, 0)}</div>
+                    }</li>
                 </ul>
             </div>
         </header>

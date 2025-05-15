@@ -12,14 +12,20 @@
     min-width: 100vw;
 }
 
-.shoppingBtn {
-    background-color: var(--light-blue);
+.shoppingLink {
+    background-color: var(--accent);
     border: none;
-    color: var(--dark-blue);
+    border-radius: 50px;
+    color: var(--text);
+    font-weight: bold;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 30px 60px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+.shoppingLink:hover {
+    transform: scale(1.1);
 }
 
 .about {
@@ -27,4 +33,12 @@
     margin: 50px;
     gap: 20px;
     align-items: center;
+    max-width: 1500px;
+}
+
+.about div {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: var(--main);
 }
