@@ -26,3 +26,12 @@
     display: flex;
 }
 
+@media (max-width: 700px) {
+    .onProductPage {
+        height: 450px;
+    }
+
+    .inCart {
+        width: 300px;
+    }
+}

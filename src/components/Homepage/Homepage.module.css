@@ -8,7 +8,8 @@
     align-items: center;
     background-image: url("/homepage-background.jpg");
     background-position: center;
-    min-height: 1000px;
+    background-size: cover;
+    min-height: 70vh;
     min-width: 100vw;
 }
 
@@ -30,7 +31,7 @@
 
 .about {
     display: flex;
-    margin: 50px;
+    margin: 100px 20px;
     gap: 20px;
     align-items: center;
     max-width: 1500px;
@@ -41,4 +42,14 @@
     border-radius: 10px;
     padding: 50px;
     background-color: var(--main);
+}
+
+@media (max-width: 700px) {
+    .shoppingLink {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
 }

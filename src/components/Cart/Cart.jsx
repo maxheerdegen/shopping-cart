@@ -22,7 +22,7 @@ function Cart () {
         <div className={styles.container}>
             <ul>
                 {cartItems.length === 0 ? (
-                    <div>No items in cart :(</div>
+                    <div>There are no items in your cart :(</div>
                 ) : (
                 cartItems.map((item) => {
                     return <ShopItem className={itemStyles.inCart} key={item.id} item={item} handleButtonClick={removeFromCart} itemQuantity={item.quantity} buttonTitle="Remove from cart" changeQuantity={changeQuantity}/>;

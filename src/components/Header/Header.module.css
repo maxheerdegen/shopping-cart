@@ -7,7 +7,7 @@ Header {
     background-color: var(--main);
     padding: 10px 100px;
     min-width: 100vw;
-    height: 200px;
+    height: 30vh;
     font-size: 2.5rem;
     box-shadow: var(--shadow);
 }
@@ -20,12 +20,12 @@ ul {
 header a {
     padding: 10px;
     border-radius: 20px;
+    text-align: center;
 }
 
 header a:hover {
     background-color: var(--accent);
 }
-
 
 .navBar {
     display: flex;
@@ -39,9 +39,25 @@ header a:hover {
 
 .cartQuantity {
     background-color: var(--accent);
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
+    width: 60px;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    header {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .navBar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .navBar li:nth-child(1) {
+        display: none;
+    }
 }
 
